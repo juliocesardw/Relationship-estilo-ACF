@@ -1,0 +1,125 @@
+:root{
+    --color-border: #E5E5E5;
+    --color-fondo: #F7F7F7;
+    --color-texto: #575353;
+    --color-negro: #222222;
+    --color-list: #0091CD;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+.contenedor{
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h3{
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-negro);
+}
+
+ol,ul{
+    list-style: none;
+}
+
+.content-relation{
+    margin-top: 20px;
+}
+
+.content-relation .header-title{
+   margin-bottom: 10px;
+}
+
+.content-relation .header-title p{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.content-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.content-list .opc-list,
+.content-list .val-list{
+    width: 50%;
+    padding: 16px;
+    height: 160px;
+    overflow: auto;
+}
+
+.content-list .opc-list{
+    background: var(--color-fondo);
+    border-right: 1px solid var(--color-border);
+}
+
+.content-list .opc-list ul li .item-list,
+.content-list .val-list ul li .item-list{
+    padding: 6px;
+    display: block;
+    font-size: 15px;
+    color: var(--color-texto);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.content-list .opc-list ul li .item-list.disabled{
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.content-list .opc-list ul li .item-list:hover,
+.content-list .val-list ul li .item-list:hover{
+    background: var(--color-list);
+    color: #fff;
+}
+
+
+.content-list .val-list ul li .item-list:hover .close{
+    display: inline-block;
+}
+
+.content-list .val-list ul li .item-list .close{
+    display: none;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #096890;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+}
+
+
+.btn{
+   background: var(--color-list);
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 3px;
+   outline: 0;
+   margin: 10px 0;
+   border: none;
+   cursor: pointer;
+}
